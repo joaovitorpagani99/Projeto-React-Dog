@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home";
+import User from "./Components/User/User";
 import Login from "./Components/Login/Login";
 import { UserStorage } from "./UseContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProtectedRoute from "./Components/Helper/ProtectedRoute";
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login/*" element={<Login />} />
+            <Route path="conta/*" element={<User />} />
           </Routes>
           <Footer />
         </UserStorage>
