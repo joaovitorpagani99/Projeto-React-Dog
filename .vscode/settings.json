@@ -5,6 +5,7 @@
         ".gitignore": true,
         "package-lock.json": true,
         "public":true,
-        "package.json": true,
-    }
+        "package.json": false,
+    },
+    "DockerRun.DisableDockerrc": true
 }
