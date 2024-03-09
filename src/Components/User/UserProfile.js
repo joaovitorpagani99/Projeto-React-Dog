@@ -1,17 +1,18 @@
-import React from 'react'
-import { useParams } from 'react-router-dom';
-import Feed from '../Feed/Feed';
+import React from "react";
+import { useParams } from "react-router-dom";
+import Feed from "../Feed/Feed";
+import Head from "../Helper/Head";
 
 const UserProfile = () => {
-  
-    const {user} = useParams();
-  
-    return (
-    <section className="container mainSection">
-        <h1 className='title'>User Profile</h1>
-        <Feed user={user} />
-    </section>
-  )
-}
+  const { user } = useParams();
 
-export default UserProfile
+  return (
+    <section className="container mainSection">
+      <Head title={user} />
+      <h1 className="title">User Profile</h1>
+      <Feed user={user} />
+    </section>
+  );
+};
+
+export default UserProfile;
